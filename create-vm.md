@@ -12,6 +12,11 @@ de las mismas. También puede decirse que es un proceso que separa el sistema op
 subyacente. En este laboratorio se creará una máquina virtual utilizando el shell de linea de comandos y lenguaje de programación Powershell.
 **Hyper-V** es el hipervisor nativo disponible en sistemas operativos para servidores desde Windows Server 2008 y en sistemas cliente desde 
 Windows 8. Se estará trabajando con un script pre-creado que se encuentra [en la siguiente dirección!](https://github.com/humberto-castellon/lab-repo/blob/humberto-castellon-patch-1/Lab%20%231.ps1 )
+## Materiales
+* Computador con Windows 10
+* Script pre-creado
+* Imagen de instalación
+
 ## ESTE LABORATORIO CONTIENE LAS SIGUIENTES ACTIVIDADES
 1. Creación de un switch virtual al cual se conectará la máquina virtual durante el proceso de creación.
 2. Creación de la máquina virtual.
