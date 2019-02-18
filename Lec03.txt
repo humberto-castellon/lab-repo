@@ -92,9 +92,9 @@ namespace EstructuraDatos
             var arr = arrbidimensional[0, 0];
             var arr1 = arrbidimensional[0, 1];
             var arr2 = arrbidimensional[1, 0];
-            for (int a = 0; a < arrbidimensional.Length; a++)
+            for (int a = 0; a < arrbidimensional.GetLength(0); a++)
             {
-                for (int b = 0; b < arrbidimensional.Length; b++)
+                for (int b = 0; b < arrbidimensional.GetLength(1); b++)
                 {
                     Console.WriteLine(arrbidimensional[a,b]);
 
