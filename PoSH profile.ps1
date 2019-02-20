@@ -1,7 +1,7 @@
 
 Get-Help about_ | Get-Random
 #version 1
-function prompt {
+function entrada {
     if ([System.IntPtr]::Size -eq 8) {$size = '64 bit'}
     else {$size = '32 bit'}
     $UsuarioActual = [Security.Principal.WindowsIdentity]::GetCurrent()
