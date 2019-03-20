@@ -1,0 +1,122 @@
+namespace EstructuraDatos
+{
+    //Definicion de la clase
+    class Program
+    {
+        //El metodo main() le hace saber al compilador C# donde empezar la ejecucion del programa
+        static void Main(string[] args)
+        {
+            #region Ejercicio 1 
+            //calcule la suma de dos numeros digitados por un usuario
+
+            //Pedimos al usuario que digite los numeros
+            Console.Write("Introduzca el primer numero: ");
+            //Lectura de numeros no se hace directamente
+            int numero1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Introduzca el segundo numero: ");
+            int numero2 = Convert.ToInt32(Console.ReadLine());
+            int suma = (numero1 + numero2);
+            Console.WriteLine(suma);
+
+            //Salida con formato
+            //Console.Write("La suma de {0} y {1} es {2}!\n", numero1, numero2, suma);
+
+            #endregion
+
+
+            #region Ejercicio 2
+            //Encontrar el numero mayor entre dos numeros
+            Console.Write("Introduzca el primer numero: ");
+            int primernumero = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Introduzca el segundo numero: ");
+            int segundonumero = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Introduzca el tercer numero: ");
+            int tercernumero = Convert.ToInt32(Console.ReadLine());
+
+            bool mayorprimerosdos = (primernumero > segundonumero) && (primernumero > tercernumero);
+                if (mayorprimerosdos)
+            {
+                Console.WriteLine("El primer numero es el mayor");
+            }
+                else
+            {
+                
+                bool mayorsegundo = (segundonumero > primernumero) && (segundonumero > tercernumero);
+                    if (mayorsegundo)
+                    { 
+                        Console.WriteLine("El segundo numero es el mayor");
+                    }
+                    else
+                {
+                    Console.WriteLine("El tercer numero es el mayor");
+                }
+            }
+            #endregion
+
+            #region Arreglos
+
+
+            //Declaracion e inicializacion de arreglos
+            string[] nombres0; //declarando el arreglo
+            string[] Apellidos = new string[11]; //creando el arreglo
+            var nombres = new string[] { "Karla", "Edwin", "Claudia" };//Inicializando el arreglo
+            var nombres1 = new string[3] { "Karla", "Edwin", "Claudia" };
+
+            string[] nombres2= { "Karla", "Edwin", "Claudia" };
+            string[] nombres3 = new string[] {"Karla", "Edwin", "Claudia" };
+            int[] numeros = new int[5] {15, 10, 5, 3, 4 };
+
+            Console.WriteLine(nombres3.Rank);//verifica si el arreglo es unidimensional, bidimensional..
+            Console.WriteLine(nombres3.Length);//Determina el numero de elementos en el arreglo
+            Console.WriteLine(nombres3.GetLength(0)); //Obtener la longitud de una dimension especifica
+            
+            //Accediendo los elementos de un arreglo
+            //string[] nombres2 = { "Karla", "Edwin", "Claudia" };
+            Console.WriteLine(nombres2[1]) ; //Un elemento especifico
+            //Para acceder todo el arreglo iteramos
+            for (int indice=0; indice < nombres2.Length; indice++)
+            {
+                //Imprimir cada elemento del arreglo en una linea por separado
+                Console.WriteLine("Elemento[0] = {1}", indice, nombres2[indice]);
+            }
+            //Otra forma es con el bucle "foreach"
+            foreach (var nombre in nombres2)
+            {
+                Console.WriteLine(nombre);
+            }
+
+            #endregion
+
+            #region Arreglos multidimensionales
+            int[,] arrbidimensional = { { 1, 2 },{ 3, 4 } };
+            var arr = arrbidimensional[0, 0];
+            var arr1 = arrbidimensional[0, 1];
+            var arr2 = arrbidimensional[1, 0];
+            for (int a = 0; a < arrbidimensional.GetLength(0); a++)
+            {
+                for (int b = 0; b < arrbidimensional.GetLength(1); b++)
+                {
+                    Console.WriteLine(arrbidimensional[a,b]);
+
+                }
+
+            }
+            #endregion
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+        }
+    }
+}
